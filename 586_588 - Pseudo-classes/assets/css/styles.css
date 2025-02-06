@@ -41,9 +41,7 @@ input:enabled {
     cursor: not-allowed;
 } */
 
-input:checked + p {
-    width: 50px;
-    height: 50px;
+input:not(:checked) + p {
     background:darkcyan;
 }
 
@@ -53,4 +51,24 @@ input:checked + p {
 
 input:required {
     background:lightcoral;
+}
+
+p:not(.meio) {
+    background: rgba(0, 0, 0, 0.2)
+}
+
+.childs li:nth-child(odd) {
+    background-color:purple;
+}
+
+.childs li:nth-child(even) {
+    background-color: brown;
+}
+
+.childs li:nth-child(3n) {
+    background: aqua;
+}
+
+.childs li:nth-child(2n + 5) {
+    background: black;
 }
