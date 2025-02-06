@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+p {
+    margin: 0 0 24px;
+}
+
+.two-col {
+    display:flex;
+}
+
+.two-col .col {
+    display:flex;
+    flex-direction: column;
+    background: goldenrod;
+    margin: 15px;
+    padding: 25px;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.gallery .img {
+    flex: 1 0 20%; 
+    height: 50px;
+    background-color: blue;
+    margin: 10px;
+}

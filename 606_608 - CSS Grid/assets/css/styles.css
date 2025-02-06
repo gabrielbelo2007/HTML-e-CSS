@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.grid {
+    width: calc(100% + 30px);
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); */
+    /* grid-template-rows: repeat(2, 1fr 2fr); */
+    grid-template-columns: [um] 1fr
+    [dois] 1fr
+    [tres] 1fr
+    [quatro] 1fr;
+    grid-template-rows: [um] 1fr
+    [dois] 1fr;
+    /* gap: 30px; -> nao funciona em todos os navegadores */
+    /* row-gap: 30px;
+    column-gap: 30px; */
+}
+
+.grid div {
+    background: lightblue;
+    min-height: 100px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.grid div:nth-child(5) {
+    background: red;
+    grid-area: um / um / quatro / quatro;
+    /* grid-row: um / dois;
+    grid-column: span 2 / span 3;  */
+    /* grid-column-start: um;
+    grid-column-end: dois; */
+}
+
+@media (max-width: 768px) {
+    .grid div:nth-child(5) {
+        grid-column: span 1;
+    }
+}
